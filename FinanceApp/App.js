@@ -6,6 +6,7 @@ import {
 
 import fire from './src/config/Fire';
 import Login from './src/components/Login'
+import Register from './src/components/Register'
 import Home from './src/components/Home'
 
 

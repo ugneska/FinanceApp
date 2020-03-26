@@ -16,7 +16,6 @@ import {
 import fire from '../config/Fire';
 import Register from './Register'
 
-
 export default class Login extends Component {
     constructor(props) {
         super(props);
