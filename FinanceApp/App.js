@@ -2,6 +2,7 @@ import React from 'react';
 import {
   StyleSheet,
   View
+} from 'react-native';
 
 import fire from './src/config/Fire';
 import Login from './src/components/Login'
