@@ -14,6 +14,9 @@ import {
 } from 'react-native'
 
 import fire from '../config/Fire';
+import Register from './Register'
+
+
 export default class Login extends Component {
     constructor(props) {
         super(props);
@@ -92,7 +95,6 @@ export default class Login extends Component {
                     </TouchableWithoutFeedback>
                 </KeyboardAvoidingView>
             </SafeAreaView>
-
         )
     }
 }
