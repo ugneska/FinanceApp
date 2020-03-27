@@ -6,6 +6,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 
+import { Actions } from 'react-native-router-flux'
 import fire from '../config/Fire';
 
 
@@ -15,10 +16,10 @@ export default class Home extends React.Component {
         this.logout = this.logout.bind(this);
     }
 
-
     logout() {
         fire.auth().signOut();
     }
+    
     render() {
         return (
             <View style={styles.container}>

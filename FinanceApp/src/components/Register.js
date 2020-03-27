@@ -15,6 +15,8 @@ import {
 
 import fire from '../config/Fire';
 
+import { Actions } from 'react-native-router-flux'
+
 export default class Register extends Component {
     constructor(props) {
         super(props);
@@ -33,7 +35,7 @@ export default class Register extends Component {
     signup(e) {
         e.preventDefault();
         fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
-        }).then((u) => { console.log(u) })
+        }).then((u) => { })
             .catch((error) => {
                 console.log(error);
             })
