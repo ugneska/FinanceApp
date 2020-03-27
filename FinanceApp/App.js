@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 
 import fire from './src/config/Fire';
-
+import { NavigationContainer } from '@react-navigation/native';
 import Routes from './src/Routes'
 
 class App extends React.Component {
@@ -33,9 +33,9 @@ class App extends React.Component {
   }
   render() {
     return (
-      <View style={styles.container}>
-        <Routes />
-      </View>
+        <NavigationContainer>
+          <Routes />
+        </NavigationContainer>
     )
   }
 }

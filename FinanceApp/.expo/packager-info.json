@@ -2,8 +2,8 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 3240,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "packagerPid": 10368,
+  "expoServerNgrokUrl": "https://79-yqm.anonymous.financeapp.exp.direct",
+  "packagerNgrokUrl": "https://packager.79-yqm.anonymous.financeapp.exp.direct",
+  "ngrokPid": 13864
 }

@@ -1,16 +1,15 @@
+
 import React from 'react';
 import {
+    Text,
     StyleSheet,
     View,
-    Text,
     TouchableOpacity
 } from 'react-native';
 
-import { Actions } from 'react-native-router-flux'
 import fire from '../config/Fire';
 
-
-export default class Home extends React.Component {
+export default class CartScreen extends React.Component {
     constructor(props) {
         super(props);
         this.logout = this.logout.bind(this);
@@ -19,10 +18,10 @@ export default class Home extends React.Component {
     logout() {
         fire.auth().signOut();
     }
-    
     render() {
         return (
             <View style={styles.container}>
+                <Text>AccountScreen</Text>
                 <TouchableOpacity style={styles.buttonContainer} onPress={this.logout}>
                     <Text style={styles.buttonText}>logout</Text>
                 </TouchableOpacity>
@@ -36,6 +35,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         justifyContent: 'center',
+        alignContent:'center'
     },
 });
 

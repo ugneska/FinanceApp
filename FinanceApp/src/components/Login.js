@@ -16,7 +16,6 @@ import {
 import fire from '../config/Fire';
 import { Actions } from 'react-native-router-flux'
 
-
 export default class Login extends Component {
     constructor(props) {
         super(props);
@@ -32,14 +31,14 @@ export default class Login extends Component {
         this.setState({ [e.target.name]: e.target.value });
     }
 
-    home() {
-        Actions.home()
+    mainScreen() {
+        Actions.mainScreen()
     }
 
     login(e) {
         e.preventDefault();
         fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
-            this.home()
+            this.mainScreen()
         }).catch((error) => {
             console.log(error);
         });
