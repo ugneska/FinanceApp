@@ -9,7 +9,7 @@ import {
 
 import fire from '../config/Fire';
 
-export default class CartScreen extends React.Component {
+export default class Settings extends React.Component {
     constructor(props) {
         super(props);
         this.logout = this.logout.bind(this);
@@ -21,9 +21,8 @@ export default class CartScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>AccountScreen</Text>
                 <TouchableOpacity style={styles.buttonContainer} onPress={this.logout}>
-                    <Text style={styles.buttonText}>logout</Text>
+                    <Text style={styles.buttonText}>Logout</Text>
                 </TouchableOpacity>
             </View>
         )
@@ -37,5 +36,21 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignContent:'center'
     },
+    buttonContainer:{
+        backgroundColor: '#d3d3d3',
+        height: 45,
+        width: 350,
+        borderRadius: 35,
+        marginHorizontal: 25,
+        marginBottom: 10,
+        bottom: 0
+    },
+    buttonText:{
+        textAlign: 'center',
+        marginTop: 10,
+        color: 'black',
+        fontSize: 15,
+        fontWeight: 'bold'
+    }
 });
 
