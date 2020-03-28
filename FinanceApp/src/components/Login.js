@@ -32,7 +32,7 @@ export default class Login extends Component {
     }
 
     mainScreen() {
-        Actions.mainScreen()
+        Actions.MainScreen()
     }
 
     login(e) {
