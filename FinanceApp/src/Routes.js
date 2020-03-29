@@ -19,28 +19,33 @@ import Processors from './categories/Processors'
 import Ram from './categories/Ram'
 
 
+import { Provider } from 'react-redux'
+import store from './store'
+
+
 export default class Routes extends Component {
     render() {
         return (
-            <Router>
-                <Stack key="root">
-                    {/* <Scene key="login" component={Login} title="login" initial={true} hideNavBar={true} /> */}
-                    {/* <Scene key="register" component={Register} title="register" hideNavBar={true} /> */}
-                    <Scene key="MainScreen" component={MainScreen} title="PC PARTS" type='replace' titleStyle={{flex: 1, textAlign: 'center',}} />
-                    <Scene key="HomeScreen" component={HomeScreen} />
-                    <Scene key="CartScreen" component={CartScreen} title="Cart" />
+            <Provider store={store}>
+                <Router>
+                    <Stack key="root">
+                        {/* <Scene key="login" component={Login} title="login" initial={true} hideNavBar={true} /> */}
+                        {/* <Scene key="register" component={Register} title="register" hideNavBar={true} /> */}
+                        <Scene key="MainScreen" component={MainScreen} title="PC PARTS" type='replace' titleStyle={{ flex: 1, textAlign: 'center', }} />
+                        <Scene key="HomeScreen" component={HomeScreen} />
+                        <Scene key="CartScreen" component={CartScreen} title="Cart" />
 
-                    <Scene key="Cases" component={Cases} title="Cases" titleStyle={{flex: 1, textAlign: 'center',}}  />
-                    <Scene key="Coolers" component={Coolers} title="Coolers" titleStyle={{flex: 1, textAlign: 'center',}}  />
-                    <Scene key="Gpu" component={Gpu} title="Grapchics Card" titleStyle={{flex: 1, textAlign: 'center',}}  />
-                    <Scene key="Hard_drives" component={Hard_drives} title="Hard drives" titleStyle={{flex: 1, textAlign: 'center',}}  />
-                    <Scene key="Motherboards" component={Motherboards} title="Motherboards" titleStyle={{flex: 1, textAlign: 'center',}}  />
-                    <Scene key="Power_supplies" component={Power_supplies} title="Power supplies" titleStyle={{flex: 1, textAlign: 'center',}}  />
-                    <Scene key="Processors" component={Processors} title="Processors" titleStyle={{flex: 1, textAlign: 'center',}}  />
-                    <Scene key="Ram" component={Ram} title="Ram" titleStyle={{flex: 1, textAlign: 'center',}}  />
-                </Stack>
-            </Router>
-
+                        <Scene key="Cases" component={Cases} title="Cases" titleStyle={{ flex: 1, textAlign: 'center', }} />
+                        <Scene key="Coolers" component={Coolers} title="Coolers" titleStyle={{ flex: 1, textAlign: 'center', }} />
+                        <Scene key="Gpu" component={Gpu} title="Grapchics Card" titleStyle={{ flex: 1, textAlign: 'center', }} />
+                        <Scene key="Hard_drives" component={Hard_drives} title="Hard drives" titleStyle={{ flex: 1, textAlign: 'center', }} />
+                        <Scene key="Motherboards" component={Motherboards} title="Motherboards" titleStyle={{ flex: 1, textAlign: 'center', }} />
+                        <Scene key="Power_supplies" component={Power_supplies} title="Power supplies" titleStyle={{ flex: 1, textAlign: 'center', }} />
+                        <Scene key="Processors" component={Processors} title="Processors" titleStyle={{ flex: 1, textAlign: 'center', }} />
+                        <Scene key="Ram" component={Ram} title="Ram" titleStyle={{ flex: 1, textAlign: 'center', }} />
+                    </Stack>
+                </Router>
+            </Provider>
         )
     }
 }
