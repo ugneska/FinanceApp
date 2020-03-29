@@ -6,18 +6,29 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-import { Actions } from 'react-native-router-flux'
+import { books } from '../Data'
+import Products from '../components/Products'
+import { connect } from 'react-redux'
 
-export default class Motherboards extends React.Component {
+
+class Motherboards extends React.Component {
 
     render() {
         return (
             <View style={styles.container}>
-                <Text>BLALLA</Text>
+                <Products products={books} onPress={this.props.addItemToCart} />
             </View>
         )
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addItemToCart: (product) => dispatch({ type: 'ADD_TO_CART', payload: product })
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Motherboards)
 
 const styles = StyleSheet.create({
     container: {

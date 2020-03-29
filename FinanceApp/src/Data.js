@@ -1,8 +1,9 @@
-export const electronics = [
+export const motherboards = [
     {
         id: 1,
         name: 'Fifa 19',
-        price: 49.99
+        price: 49.99,
+        
     },
     {
         id: 2,
