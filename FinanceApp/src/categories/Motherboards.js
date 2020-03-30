@@ -2,11 +2,10 @@ import React from 'react';
 import {
     StyleSheet,
     View,
-    Text,
-    TouchableOpacity
+    ScrollView
 } from 'react-native';
 
-import { books } from '../Data'
+import { motherboards } from '../Data'
 import Products from '../components/Products'
 import { connect } from 'react-redux'
 
@@ -16,8 +15,13 @@ class Motherboards extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Products products={books} onPress={this.props.addItemToCart} />
+                <ScrollView style={styles.scroll}>
+                    <View style={styles.goodsContainer}>
+                        <Products products={motherboards} onPress={this.props.addItemToCart} />
+                    </View>
+                </ScrollView>
             </View>
+
         )
     }
 }
@@ -35,7 +39,13 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         justifyContent: 'center',
-        alignContent: 'center'
+        alignContent: 'center',
+    },
+
+    scroll: {
+        marginTop: 15,
+        marginHorizontal: 15,
+        marginBottom: 10,
     },
 });
 

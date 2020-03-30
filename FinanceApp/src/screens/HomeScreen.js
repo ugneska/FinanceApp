@@ -146,6 +146,7 @@ const styles = StyleSheet.create({
     scroll: {
         marginTop: 30,
         marginHorizontal: 15,
+        marginBottom: 10
     },
     categoriesContainer: {
         flexDirection: 'row',
@@ -155,13 +156,15 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderWidth: 2,
         width: 190,
-        height: 190,
+        height: 225,
         alignContent: 'center',
         justifyContent: 'center',
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        paddingVertical: 10
     },
     text: {
-        textAlign: "center"
+        textAlign: "center",
+        paddingTop: 9
     },
     photo: {
         width: '100%',
