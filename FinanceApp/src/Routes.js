@@ -29,8 +29,8 @@ export default class Routes extends Component {
             <Provider store={store}>
                 <Router>
                     <Stack key="root">
-                        {/* <Scene key="login" component={Login} title="login" initial={true} hideNavBar={true} /> */}
-                        {/* <Scene key="register" component={Register} title="register" hideNavBar={true} /> */}
+                        <Scene key="login" component={Login} title="login" initial={true} hideNavBar={true} />
+                        <Scene key="register" component={Register} title="register" hideNavBar={true} />
                         <Scene key="MainScreen" component={MainScreen} title="PC PARTS" type='replace' titleStyle={{ flex: 1, textAlign: 'center', }} />
                         <Scene key="HomeScreen" component={HomeScreen} />
                         <Scene key="CartScreen" component={CartScreen} title="Cart" />
