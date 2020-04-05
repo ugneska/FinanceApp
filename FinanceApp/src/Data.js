@@ -426,6 +426,3 @@ export const gpu = [
         imageUrl: require('../assets/foto/VaizdoPlokstes/7.jpg'),
     }
 ]
-
-
-

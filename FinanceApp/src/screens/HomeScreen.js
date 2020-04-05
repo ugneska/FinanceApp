@@ -23,39 +23,43 @@ import motherboardPhoto from '../../assets/motherboard.jpg'
 import psuPhoto from '../../assets/psu.jpg'
 
 export default class HomeScreen extends React.Component {
-    
-    cases(){
+
+    cases() {
         Actions.Cases()
     }
-    
-    coolers(){
+
+    coolers() {
         Actions.Coolers()
     }
-    
+
     gpu() {
         Actions.Gpu()
     }
-    
-    hard_drives(){
+
+    hard_drives() {
         Actions.Hard_drives()
     }
-    
-    motherboards(){
+
+    motherboards() {
         Actions.Motherboards()
     }
-    
-    power_supplies(){
+
+    power_supplies() {
         Actions.Power_supplies()
     }
-    
+
     processors() {
         Actions.Processors()
     }
-    
+
     ram() {
         Actions.Ram()
     }
-    
+
+    infiniteScroll(){
+        Actions.InfiniteScroll()
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -113,6 +117,12 @@ export default class HomeScreen extends React.Component {
                                 <Text style={styles.text}> Hard drives</Text>
                             </View>
                         </TouchableOpacity>
+                        <TouchableOpacity onPress={this.infiniteScroll}>
+                            <View style={styles.categories}>
+                                <Image source={hddPhoto} style={styles.photo} />
+                                <Text style={styles.text}> InfiniteScroll</Text>
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </ScrollView>
             </View>
@@ -140,7 +150,7 @@ const styles = StyleSheet.create({
         marginTop: -40,
         color: 'black'
     },
-    searchIcon:{
+    searchIcon: {
         padding: 9
     },
     scroll: {

@@ -21,6 +21,7 @@ import Ram from './categories/Ram'
 
 import { Provider } from 'react-redux'
 import store from './store'
+import InfiniteScroll from './screens/InfiniteScroll'
 
 
 export default class Routes extends Component {
@@ -29,8 +30,8 @@ export default class Routes extends Component {
             <Provider store={store}>
                 <Router>
                     <Stack key="root">
-                        <Scene key="login" component={Login} title="login" initial={true} hideNavBar={true} />
-                        <Scene key="register" component={Register} title="register" hideNavBar={true} />
+                        {/* <Scene key="login" component={Login} title="login" initial={true} hideNavBar={true} /> */}
+                        {/* <Scene key="register" component={Register} title="register" hideNavBar={true} /> */}
                         <Scene key="MainScreen" component={MainScreen} title="PC PARTS" type='replace' titleStyle={{ flex: 1, textAlign: 'center', }} />
                         <Scene key="HomeScreen" component={HomeScreen} />
                         <Scene key="CartScreen" component={CartScreen} title="Cart" />
@@ -43,6 +44,7 @@ export default class Routes extends Component {
                         <Scene key="Power_supplies" component={Power_supplies} title="Power supplies" titleStyle={{ flex: 1, textAlign: 'center', }} />
                         <Scene key="Processors" component={Processors} title="Processors" titleStyle={{ flex: 1, textAlign: 'center', }} />
                         <Scene key="Ram" component={Ram} title="Ram" titleStyle={{ flex: 1, textAlign: 'center', }} />
+                        <Scene key="InfiniteScroll" component={InfiniteScroll} title="InfiniteScroll" titleStyle={{ flex: 1, textAlign: 'center', }} />
                     </Stack>
                 </Router>
             </Provider>
