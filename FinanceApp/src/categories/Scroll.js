@@ -5,9 +5,9 @@ if (!global.atob) { global.atob = decode }
 import React from 'react';
 import * as firebase from 'firebase';
 import 'firebase/firestore';
-import firebaseConfig from './config';
+import firebaseConfig from '../config/Fire';
 // Imports: Screens
-import InfiniteScroll from './screens/InfiniteScroll';
+import InfiniteScroll from '../screens/InfiniteScroll';
 // Firebase: Initialize
 firebase.initializeApp({
   apiKey: firebaseConfig.apiKey,
@@ -17,16 +17,12 @@ firebase.initializeApp({
   storageBucket: firebaseConfig.storageBucket,
   messagingSenderId: firebaseConfig.messagingSenderId,
 });
-
 // Firebase: Cloud Firestore
 const database = firebase.firestore();
 // React Native: App
-export default function App() {
+export default function Scroll() {
   return (
     
     <InfiniteScroll database={database}/>
   );
 }
-
-
-export default App
